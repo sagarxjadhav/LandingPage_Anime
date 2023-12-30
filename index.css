@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative; 
+    /* by giving position relative in parent their children not 
+    go anywhere (children are in controlled manner) */
+}
+
+.nav{
+    height: 70px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.667);
+    padding: 0 4vw; 
+    /* top & bottom = 0; left & right = 3vw */
+}
+
+.nav-part2{
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+    /* justify-content: space-between; */
+    /* space between nahi hogi becoz space nahi hai 
+    element mai so try to do here background color : blue; 
+    then you will to understand that there is no space  */
+    gap: 4vw;
+}
+
+.nav h2{
+    font-size: 3vw;
+    font-weight: 700;
+    padding-left: 3vw;
+}
+
+.nav h2 a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav h4{
+    font-size: 1.1vw;
+    
+}
+
+.nav button{
+    font-size: 1vw;
+    padding: 0.7vw 1.4vw;
+    background-color: #CA9D00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav button a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav i{
+    font-size: 1.6vw;
+    font-weight: 800;
+    display: none;
+    /* display:none removes the element from the document.
+     It does not take up any space */
+}
+
+
+.content{
+    height: calc(100% - 70px);
+    /* We are using calc() function becoz to avoid vertical scrolling
+    by knowing how much pixel are remaining in hightwise so 
+    we can use them. There is above formula 100px is hight
+    we used for the navbar. At answer we get remaining empty height */
+    width: 100%;
+    /* background-color: rgb(199, 164, 123); */
+    display: flex;
+    position: relative;
+}
+ 
+
+.left{
+    height: 100%;
+    width: 55%;
+    /* background-color: crimson; */
+    padding: 5vw 6vw;
+}
+
+.left h1{
+    font-size: 4.2vw;
+    line-height: 4.4vw ;
+}
+
+.left h1 span{
+    color: #89B126;
+}
+
+.left p{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #666;
+    width: 80%;
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+}
+
+.content button{
+    font-size: 1.5vw;
+    padding: 1.1vw 2.1vw;
+    background-color: #89B126;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.content button a{
+    text-decoration: none;
+    color: white;
+}
+
+.right{
+    height: 100%;
+    width: 45%;
+    /* background-color: royalblue; */
+}
+
+img{
+    /* height: 35vw; */
+    width: 44vw;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+@media (max-width:600px) {
+    .nav{
+        /* background-color: lightseagreen;
+        color: white; */
+        padding: 0 6vw;
+        height: 60px;
+    }
+
+    .nav h2{
+        font-size: 5.1vw;
+    }
+
+    .nav h4{
+        font-size: 3vw;
+        display: none;
+    }
+
+    .nav button{
+        display: none;
+    }
+
+    .nav i{
+        display: block;
+        font-size: 4.5vw;
+    }
+
+    .content{
+        height: calc(100% - 60px);
+        flex-direction: column;
+        /* to get elements in column wise from content class */
+    }
+
+    .left{
+        /* background-color: red; */
+        width: 100%;
+        height: 50%;
+        padding: 4vw 6vw;
+    }
+
+    .left h1{
+        font-size: 9vw;
+        line-height: 11vw;
+    }
+
+    .left p{
+        font-size: 3.5vw;
+        width: 90%;
+        margin-top: 6vw;
+        margin-bottom: 7vw;
+    }
+
+    .content button{
+        padding: 3vw 6vw;
+        font-size: 3.5vw;
+        border-radius: 4px;
+        font-weight: 600;
+    }
+
+    .right{
+        /* background-color: blue; */
+        width: 100%;
+        height: 50%;
+    }
+    
+    .right img{
+        width: 100vw;
+    }
+}
+ 
